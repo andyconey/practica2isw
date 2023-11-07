@@ -55,8 +55,10 @@ class CommentsCreateView(generic.CreateView):
     template_name = 'comments_form.html'
     model = models.Comments
     fields = ['author', 'comment', 'rating']
+    success_url = reverse_lazy('comments')
 
 class CommentRatingView(generic.UpdateView):
     template_name = 'comment_rating.html'
     model = models.Comments
     fields = ['rating']
+    success_url = reverse_lazy('comments')
