@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}
+Comment Section
+{% endblock title %}
+
+{% block content %}
+<h1>Comment Section</h1>
+<p>
+Here you can find the comments about our page.
+</p>
+<a href="{% url 'comments_form' %}">
+    Add page comment
+</a>
+<ul class="list-group">
+    {% for comment in comments %}
+        <a class="list-group-item list-group-item-action" href="{% url 'comment_rating' comment.id %}">
+            <b>{{ comment.author }}</b>
+            <br>
+            {{ comment }}
+            <br>
+            <i>{{ 'Rating page: ' }}
+            {{ comment.rating }}</i>
+        </a>
+    {% endfor %}
+</ul>
+{% endblock content %}

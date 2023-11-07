@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/92cc5836-52a6-47c2-a7b4-5858da007fe7/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/andy-space-tours",
+    "appService.deploySubpath": "."
+}
